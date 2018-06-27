@@ -2,18 +2,82 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="./assets/css/styles.css">
     <title>Hello World CSS</title>
   </head>
   <body>
     <header>
-      <h3>Hello World CSS</h3>
+      <h3 class="site-logo">Hello World CSS</h3>
     </header>
-    <div class="container">
-      <nav></nav>
+    <div class="my-container">
+      <nav>
+        <label for="flexbox" class="flexbox">Flexbox</label>
+        <input type="checkbox" id="flexbox">
+        <ul>
+          <li><span class="navArrow">&rtrif;</span>CSS 101</li>
+          <li><span class="navArrow">&rtrif;</span>Flexbox</li>
+          <li><span class="navArrow">&rtrif;</span>Grid</li>
+          <li><span class="navArrow">&rtrif;</span>Keyboard Shortcuts the Pro's Use</li>
+        </ul>
+        <span class="navArrow">&rtrif;</span>
+      </nav>
       <section class="content">
-        <p>Coming Soon</p>
+        <h3 class="title">First Things First - What Is CSS And What Tools Do I Need</h3>
+        <p class="article">
+          CSS, or Cascade Style Sheets, is a language that lets you style webpages; nothing more.
+        </p>
+        <h3 class="title">How To Use CSS</h3>
+        <p class="article">
+          <!-- Cover: Selectors, Adding CSS files -->
+          Selectors:
+        </p>
+          <pre>
+            <code><span class="highlight">*</span> {
+              padding: 0;
+              margin: 0;
+              box-sizing: border-box;
+            }</code>
+          </pre>
+        <p class="article">
+          The highlighted star is called the <i>universal selector</i>.  This styles everything at once.
+          People use this when they want to reset the whole HTML page, and start without any default values all browsers enable.
+        </p>
+        <pre>
+          <code><span class="highlight">.myClass</span> {
+            font-size: 2em;
+            color: #88eeff;
+            font-family: sans-serif;
+          }</code>
+        </pre>
+        <p class="article">
+          The dot selector is used to indicate you are targeting a class in your HTML to style.
+        </p>
+        <pre>
+          <code><span class="highlight">#myID</span> {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }</code>
+        </pre>
+        <p class="article">
+          The Hashtag/Pound symbol is used to indicate you are targeting an ID in your HTML to style.
+          Note, you can only have one name for an ID in your HTML.
+        </p>
+        <p class="article">Linking Your CSS Files To Your HTML File:</p>
+        <pre>
+          <code>
+            <!-- <link rel="stylesheet" href="./path/to/your/css/file.css"> -->
+          </code>
+        </pre>
+        <p class="article">Linking your CSS file is pretty simlpe as you copy the above line, then where it says "path to your css file," you put the path to your CSS file.</p>
+
       </section>
     </div>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script> -->
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script> -->
+    <script src="./assets/js/scripts.js"></script>
   </body>
 </html>
