@@ -30,6 +30,7 @@ nav {
   border: 1px solid red;
   width: 22.75%;
   margin-right: 3%;
+  padding: 20px;
 }
 
 .content {
@@ -37,16 +38,62 @@ nav {
   border: 1px solid blue;
 }
 
-ul {
+-----------------------------------------------
+/* testing my own drop down menu thingy */
+ul, li {
   list-style: none;
-  display: none;
-  -webkit-transition: 2s;
-     -moz-transition: 2s;
-          transition: 2s;
 }
-#flexbox {
+
+.insideUL {
+  display: none;
+  transition: 2s;
+}
+
+.rotate {
+  color: #3f87a6;
+  font-size: 1.5em;
+  display: inline-block;
+}
+
+-----------------------------------------------
+/* CSS Tree menu styles */
+/* .outside {
+  border: 1px solid black !important;
+}
+
+ul, li {
+  list-style: none;
+}
+
+li label {
+  padding-left: 15px;
+}
+
+li input {
   display: none;
 }
-#flexbox:checked + ul {
+
+li input + ul {
+  background: url(../img/toggle-small-expand.png) 40px 0 no-repeat;
+  margin: -17px 0 0 -44px;
+  height: 1em;
+}
+
+li input + ul > li {
+  display: none;
+}
+
+li input:checked + ul {
+  background: url(../img/toggle-small.png) 40px 5px no-repeat;
+  margin: -22px 0 0 -44px;
+  padding: 20px 0px 10px 75px;
+  height: auto;
+}
+
+li input:checked + ul > li {
   display: block;
 }
+
+li input:checked + ul > li:last-child {
+margin: 0 0 0.063em;
+} */
