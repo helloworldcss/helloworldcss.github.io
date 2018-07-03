@@ -14,31 +14,24 @@
     </header>
     <div class="my-container">
       <nav>
-        <!-- <ul class="outside">
-          <li>
-            <label for="flexbox">Flexbox</label>
-            <input type="checkbox" id="flexbox">
-            <ul>
-              <li><a href="#">justify-content</a></li>
-              <li><a href="#">flex-flow</a></li>
-              <li><a href="#">align-items</a></li>
-            </ul>
-          </li>
-        </ul> -->
 
         <ul class="outside">
-          <li class="navArrow"><span class="rotate">&rtrif;</span>Flexbox
+          <span class="rotate">&rtrif;</span><li class="navArrow">Flexbox
             <ul class="insideUL animated slideInDown">
               <li>Center Vertical and Horizonal</li>
               <li>Change from row to column</li>
             </ul>
           </li>
-          <li class="navArrow"><span class="rotate">&rtrif;</span>CSS Animation
+          <div></div>
+          <span class="rotate">&rtrif;</span>
+          <li class="navArrow">CSS Animation
             <ul class="insideUL  slideInDown">
               <li>Make smooth transitions</li>
             </ul>
           </li>
-          <li class="navArrow"><span class="rotate">&rtrif;</span>References
+          <div></div>
+          <span class="rotate">&rtrif;</span>
+          <li class="navArrow">References
             <ul class="insideUL slideInDown">
               <li>Affiliate Market links</li>
             </ul>
@@ -47,43 +40,50 @@
 
       </nav>
       <section class="content">
-        <h3 class="title">First Things First - What Is CSS And What Tools Do I Need</h3>
+        <h3><span class="title">First Things First - What Is CSS And What Tools Do I Need</span></h3>
         <p class="article">
           CSS, or Cascade Style Sheets, is a language that lets you style webpages; nothing more.
         </p>
-        <h3 class="title">How To Use CSS</h3>
-        <p class="article">
-          <!-- Cover: Selectors, Adding CSS files -->
-          Selectors:
-        </p>
-          <pre>
-            <code><span class="highlight">*</span> {
-              padding: 0;
-              margin: 0;
-              box-sizing: border-box;
-            }</code>
-          </pre>
+        <h3><span class="title">How To Use CSS</span></h3>
+        <!-- Cover: Selectors, Adding CSS files -->
+        <p><span class="sub-title">Selectors</span></p>
+        <pre>
+          <code>
+
+           1 |  <span class="selector">p</span> {
+           2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
+           3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
+           4 |  }
+          </code>
+        </pre>
+        <p><span class="sub-title">Universal Selectors</span></p>
         <p class="article">
           The highlighted star is called the <i>universal selector</i>.  This styles everything at once.
           People use this when they want to reset the whole HTML page, and start without any default values all browsers enable.
         </p>
         <pre>
-          <code><span class="highlight">.myClass</span> {
-            font-size: 2em;
-            color: #88eeff;
-            font-family: sans-serif;
-          }</code>
+          <code>
+
+           1 |  <span class="selector">p</span> {
+           2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
+           3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
+           4 |  }
+          </code>
         </pre>
+        <p><span class="sub-title">Class Selectors</span></p>
         <p class="article">
           The dot selector is used to indicate you are targeting a class in your HTML to style.
         </p>
         <pre>
-          <code><span class="highlight">#myID</span> {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }</code>
+          <code>
+
+           1 |  <span class="selector">p</span> {
+           2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
+           3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
+           4 |  }
+          </code>
         </pre>
+        <p><span class="sub-title">Id Selectors</span></p>
         <p class="article">
           The Hashtag/Pound symbol is used to indicate you are targeting an ID in your HTML to style.
           Note, you can only have one name for an ID in your HTML.
@@ -91,7 +91,11 @@
         <p class="article">Linking Your CSS Files To Your HTML File:</p>
         <pre>
           <code>
-            <!-- <link rel="stylesheet" href="./path/to/your/css/file.css"> -->
+
+           1 |  <span class="selector">p</span> {
+           2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
+           3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
+           4 |  }
           </code>
         </pre>
         <p class="article">Linking your CSS file is pretty simlpe as you copy the above line, then where it says "path to your css file," you put the path to your CSS file.</p>
