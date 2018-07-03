@@ -3,10 +3,13 @@
   let navArrow = document.querySelectorAll('.navArrow');
   // let rotate = document.querySelectorAll('.rotate');
   // let insideUL = document.querySelectorAll('.insideUL');
+
   // cache navArrow.length for speed
   let navArrowLength = navArrow.length;
+
   // keep track of the user clicks for the navArrow btns
   clicked = false;
+  
   // logic for first click ( open ):
   // - click the navArrow
   // - click var turns to true

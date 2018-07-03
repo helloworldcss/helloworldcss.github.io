@@ -45,8 +45,12 @@ ul, li {
 }
 
 .insideUL {
-  display: none;
-  transition: 2s;
+  display: none; /* hide at the start */
+  margin-left: 20px;
+}
+
+.insideUL li {
+  color: #3f87a6;
 }
 
 .rotate {
@@ -56,44 +60,35 @@ ul, li {
 }
 
 -----------------------------------------------
-/* CSS Tree menu styles */
-/* .outside {
-  border: 1px solid black !important;
+/* edited the animate.css stuff to match my own style needed */
+
+@-webkit-keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -40%, 0);
+    transform: translate3d(0, -40%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-ul, li {
-  list-style: none;
+@keyframes slideInDown {
+  from {
+    -webkit-transform: translate3d(0, -40%, 0);
+    transform: translate3d(0, -40%, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-li label {
-  padding-left: 15px;
+.slideInDown {
+  -webkit-animation-duration: 0.2s;
+  animation-duration: 0.2s;
 }
-
-li input {
-  display: none;
-}
-
-li input + ul {
-  background: url(../img/toggle-small-expand.png) 40px 0 no-repeat;
-  margin: -17px 0 0 -44px;
-  height: 1em;
-}
-
-li input + ul > li {
-  display: none;
-}
-
-li input:checked + ul {
-  background: url(../img/toggle-small.png) 40px 5px no-repeat;
-  margin: -22px 0 0 -44px;
-  padding: 20px 0px 10px 75px;
-  height: auto;
-}
-
-li input:checked + ul > li {
-  display: block;
-}
-
-li input:checked + ul > li:last-child {
-margin: 0 0 0.063em;
-} */
