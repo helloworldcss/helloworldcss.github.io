@@ -38,7 +38,7 @@
         navArrow[i].style.verticalAlign = 'sub';
         insideUL[i].style.display = 'flex';
         insideUL[i].style.flexDirection = 'column';
-        insideUL[i].classList.remove('slideOutUp');
+        // insideUL[i].classList.remove('slideOutUp');
         insideUL[i].classList.add('slideInDown');
       } else {
         // second click
@@ -47,11 +47,11 @@
         clicked = false;
         rotate[i].style.transform = 'rotate(0deg)';
         rotate[i].style.verticalAlign = 'sub';
-        // insideUL[i].style.display = 'none';
+        insideUL[i].style.display = 'none';
         navArrow[i].style.verticalAlign = 'middle';
-        insideUL[i].classList.remove('slideInDown');
-        insideUL[i].classList.add('slideOutUp');
-        window.setTimeout(() => {insideUL[i].style.display = 'none';},202);
+        // insideUL[i].classList.remove('slideInDown');
+        // insideUL[i].classList.add('slideOutUp');
+        // window.setTimeout(() => {insideUL[i].style.display = 'none';},202);
         // insideUL[i].style.display = 'none';
       }
     })

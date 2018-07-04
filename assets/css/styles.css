@@ -27,8 +27,8 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0 10px 0;
-  
+  margin: 100px 0 10px 0;
+
 }
 
 header > h3 {
@@ -183,7 +183,7 @@ li.navArrow:nth-child(2) {
   animation-duration: 0.2s;
 }
 
-@-webkit-keyframes slideOutUp {
+/* @-webkit-keyframes slideOutUp {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -212,7 +212,7 @@ li.navArrow:nth-child(2) {
 .slideOutUp {
   -webkit-animation-duration: 0.2s;
   animation-duration: 0.2s;
-}
+} */
 
 /* ----------------------------------------------- */
 /* mobile */
@@ -220,11 +220,11 @@ li.navArrow:nth-child(2) {
   .my-container {
     flex-direction: column-reverse;
   }
-  
+
   .content, nav {
     width: 100%;
   }
-  
+
   nav {
     justify-content: flex-start;
   }
