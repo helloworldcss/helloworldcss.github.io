@@ -39,7 +39,7 @@
         insideUL[i].style.display = 'flex';
         insideUL[i].style.flexDirection = 'column';
         // insideUL[i].classList.remove('slideOutUp');
-        insideUL[i].classList.add('slideInDown');
+        insideUL[i].classList.add('slideInDown');  // one cannot add .slidInDown, or any of the other effects in the HTML and have it work, it has to be in the JS
       } else {
         // second click
         let rotate = document.querySelectorAll('.rotate');
