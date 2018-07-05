@@ -29,6 +29,7 @@
   for (let i = 0; i < navArrowLength; i++) {
     navArrow[i].addEventListener('click', () => {
       if ( clicked == false ) {
+        // console.log('inside if: ' + clicked);
         // first click
         let rotate = document.querySelectorAll('.rotate');
         let insideUL = document.querySelectorAll('.insideUL');
@@ -39,8 +40,9 @@
         insideUL[i].style.display = 'flex';
         insideUL[i].style.flexDirection = 'column';
         // insideUL[i].classList.remove('slideOutUp');
-        insideUL[i].classList.add('slideInDown');  // one cannot add .slidInDown, or any of the other effects in the HTML and have it work, it has to be in the JS
+      /*  insideUL[i].classList.add('slideInDown'); */ // one cannot add .slidInDown, or any of the other effects in the HTML and have it work, it has to be in the JS
       } else {
+        // console.log('inside else: ' + clicked);
         // second click
         let rotate = document.querySelectorAll('.rotate');
         let insideUL = document.querySelectorAll('.insideUL');
