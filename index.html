@@ -12,11 +12,10 @@
   </head>
   <body>
     <header>
-      <h3><span class="site-logo">Hello World CSS</span></h3>
+      <h3><span class="site-logo"><a href="https://helloworldcss.com" class="black">Hello World CSS</a></span></h3>
     </header>
     <div class="my-container">
       <nav>
-
         <ul class="outside">
           <span class="rotate">&rtrif;</span><li class="navArrow">Flexbox
             <ul class="insideUL animated">
@@ -39,68 +38,88 @@
             </ul>
           </li>
         </ul>
-
       </nav>
       <section class="content">
         <h3><span class="title">First Things First - What Is CSS And What Tools Do I Need</span></h3>
         <p class="article">
           CSS, or Cascade Style Sheets, is a language that lets you style webpages; nothing more.
         </p>
+        <p><span class="sub-title">Tools</span></p>
+        <ul class="list">
+          <li>- An online editor like <a href="https://www.jsbin.com" target="_blank">JS Bin</a></li>
+          <li>- Or an Interactive Development Environment ( IDE ) like <a href="https://www.atom.io" target="_blank">Atom</a></li>
+        </ul>
+        <p><span class="sub-title">How to use this site</span></p>
+        <p class="article">
+          I want the everyone to be able to right click on any page and choose to <code class="inline-code">view page source</code> or <code class="inline-code">inspect element</code> as see how I wrote the content.
+           Feel free to look at all the files included for this site and how they were written to learn.  Remember, the console is your friend when it comes to learning Web Development.
+        </p>
         <h3><span class="title">How To Use CSS</span></h3>
         <!-- Cover: Selectors, Adding CSS files -->
-        <p><span class="sub-title">Selectors</span></p>
+        <p><span class="sub-title">Element Selector</span></p>
         <pre>
           <code>
 
-           1 |  <span class="selector">p</span> {
+           1 |  <span class="selector highlight">p</span> {
            2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
            3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
            4 |  }
           </code>
         </pre>
-        <p><span class="sub-title">Universal Selectors</span></p>
         <p class="article">
-          The highlighted star is called the <i>universal selector</i>.  This styles everything at once.
+          The highlighted <code class="inline-code">p</code> selector is called an element selector.  You can use the HTML element name as a CSS selector minus the .
+          Say you wanted to select all the <code class="inline-code">&lt;a&gt;</code> tags in your HTML via CSS, you would use <code class="inline-code">a</code> as your selector.
+        </p>
+        <p><span class="sub-title">Universal Selectors</span></p>
+        <pre>
+          <code>
+
+           1 |  <span class="selector">*</span> {
+           2 |  <span class="space"></span><span class="property">margin</span>: <span class="value">0</span>;
+           3 |  <span class="space"></span><span class="property">padding</span>: <span class="value">0</span>;
+           4 |  }
+          </code>
+        </pre>
+        <p class="article">
+          The highlighted <code class="inline-code">*</code> is called the universal selector.  This styles everything at once.
           People use this when they want to reset the whole HTML page, and start without any default values all browsers enable.
         </p>
-        <pre>
-          <code>
-
-           1 |  <span class="selector">p</span> {
-           2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
-           3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
-           4 |  }
-          </code>
-        </pre>
         <p><span class="sub-title">Class Selectors</span></p>
-        <p class="article">
-          The dot selector is used to indicate you are targeting a class in your HTML to style.
-        </p>
         <pre>
           <code>
 
-           1 |  <span class="selector">p</span> {
+           1 |  <span class="selector highlight">.myClassName</span> {
            2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
            3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
            4 |  }
           </code>
         </pre>
+        <p class="article">
+          The <code class="inline-code">.</code> is used when you want to select a class in your HTML.  Note, class names can be used as many times as you want in your HTML;
+           meaning the class <code class="inline-code">.highlight</code> can be placed on as many HTML elements as you want.
+        </p>
         <p><span class="sub-title">Id Selectors</span></p>
-        <p class="article">
-          The Hashtag/Pound symbol is used to indicate you are targeting an ID in your HTML to style.
-          Note, you can only have one name for an ID in your HTML.
-        </p>
-        <p class="article">Linking Your CSS Files To Your HTML File:</p>
         <pre>
           <code>
 
-           1 |  <span class="selector">p</span> {
+           1 |  <span class="selector highlight">#myClassName</span> {
            2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
            3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
            4 |  }
           </code>
         </pre>
-        <p class="article">Linking your CSS file is pretty simlpe as you copy the above line, then where it says "path to your css file," you put the path to your CSS file.</p>
+        <p class="article">
+          The <code class="inline-code">#</code> is used when you want to select an Id in your HTML.  Note, Id names can only be used once in your HTML;
+          meaning the Id <code class="inline-code">#Name</code> can only be placed on one HTML element.
+        </p>
+        <p><span class="sub-title">Linking Your CSS Files To Your HTML File</span></p>
+        <pre>
+          <code>
+
+           1 |  &lt;link rel="stylesheet" href="./link/to/css/file.css"&gt;
+          </code>
+        </pre>
+        <p class="article">Linking your CSS file is pretty simlpe, as you copy the above line.  In the <code class="inline-code">href=""</code> attribute, you place the link to you CSS file.</p>
 
       </section>
       <!-- <section class="ads"></section> -->
