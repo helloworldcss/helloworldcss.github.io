@@ -6,6 +6,7 @@
     <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="../assets/css/flexbox.css">
     <meta name="theme-color" content="#540D6E">
     <title>Hello World CSS</title>
   </head>
@@ -53,23 +54,564 @@
       <section class="content">
         <h3><span class="title">Flexbox</span></h3>
         <p class="article">
-          CSS, or Cascade Style Sheets, is a language that lets you style webpages; nothing more.
+          First thing is first, the initial axis' need to be defined for flexbox, so hear goes.  Being familir with the x,y plot system from algebra
+          ( remember slopes? ), the two used in flexbox are: main axis ( x-axis ) and cross axis ( y-axis ).
+          To master flexbox, knowing these when positioning items will be less confusing.  for example, if the main flow of flexbox gets changed from
+          <code class="inline-code">row</code> to <code class="inline-code">column</code>, the main axis and cross axis will switch places.
         </p>
-        <p><span class="sub-title">This model will be used for all examples</span></p>
+        <section class="flexbox-axis">
+          <span class="cross-axis">cross axis</span>
+          <span class="main-axis">main axis</span>
+        </section>
+        <p><span class="sub-title">align-content</span></p>
         <pre>
-          <code>
+          <code class="code-sample">
+            /* all values accepted */
+            1 |  <span class="space"></span><span class="property">align-content</span>: <span class="value">flex-start | flex-end | center | space-between | space-around | stretch </span>;
+          </code>
 
-           1 |  <span class="selector highlight">p</span> {
-           2 |  <span class="space"></span><span class="property">font-size</span>: <span class="value">10px</span>;
-           3 |  <span class="space"></span><span class="property">color</span>: <span class="value">blue</span>;
-           4 |  }
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-content > .flex-start</span> {
+            2 |    <span class="space"></span><span class="property">align-content</span>: <span class="value">flex-start</span>;
+            3 |  }
+            4 |
+            5 |  <span class="selector highlight">.align-content > .center</span> {
+            6 |    <span class="space"></span><span class="property">align-content</span>: <span class="value">center</span>;
+            7 |  }
+            8 |
+            9 |  <span class="selector highlight">.align-content > .flex-end</span> {
+           10 |    <span class="space"></span><span class="property">align-content</span>: <span class="value">flex-end</span>;
+           11 |  }
+         </code>
+       </pre>
+        <section class="align-content">
+            <div class="flex-start">
+                <span class="bg-blue">flex-start</span>
+            </div>
+            <div class="center">
+                <span class="bg-blue">center</span>
+            </div>
+            <div class="flex-end">
+                <span class="bg-blue">flex-end</span>
+            </div>
+        </section>
+        <pre class="mt-20">
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-content > .space-between</span> {
+            2 |    <span class="space"></span><span class="property">align-content</span>: <span class="value">space-between</span>;
+            3 |  }
+         </code>
+       </pre>
+        <section class="align-content">
+            <div class="space-between">
+                <span class="bg-blue">space-between</span>
+                <span class="bg-yellow">space-between</span>
+                <span class="bg-blue">space-between</span>
+                <span class="bg-yellow">space-between</span>
+                <span class="bg-blue">space-between</span>
+                <span class="bg-yellow">space-between</span>
+                <span class="bg-blue">space-between</span>
+                <span class="bg-yellow">space-between</span>
+                <span class="bg-blue">space-between</span>
+                <span class="bg-yellow">space-between</span>
+                <span class="bg-blue">space-between</span>
+            </div>
+        </section>
+        <pre class="mt-20">
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-content > .space-around</span> {
+            2 |    <span class="space"></span><span class="property">align-content</span>: <span class="value">space-around</span>;
+            3 |  }
+         </code>
+       </pre>
+        <section class="align-content">
+            <div class="space-around">
+                <span class="bg-blue">space-around</span>
+                <span class="bg-yellow">space-around</span>
+                <span class="bg-blue">space-around</span>
+                <span class="bg-yellow">space-around</span>
+                <span class="bg-blue">space-around</span>
+                <span class="bg-yellow">space-around</span>
+                <span class="bg-blue">space-around</span>
+                <span class="bg-yellow">space-around</span>
+                <span class="bg-blue">space-around</span>
+                <span class="bg-yellow">space-around</span>
+                <span class="bg-blue">space-around</span>
+                <span class="bg-yellow">space-around</span>
+                <span class="bg-blue">space-around</span>
+            </div>
+        </section>
+        <pre class="mt-20">
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-content > .stretch</span> {
+            2 |    <span class="space"></span><span class="property">align-content</span>: <span class="value">stretch</span>;
+            3 |  }
+         </code>
+       </pre>
+        <section class="align-content">
+            <div class="stretch">
+                <span class="bg-blue">stretch</span>
+                <span class="bg-yellow">stretch</span>
+                <span class="bg-blue">stretch</span>
+            </div>
+        </section>
+        <p class="article">
+          Use <code class="inline-code">align-content</code> to align the content with regard to other items widths.
+          In order to see changes after using <code class="inline-code">align-content</code>, some things need to be defined: a
+          <code class="inline-code">container height</code> and/or
+          <code class="inline-code">content needs to wrap (be multi-line)</code>.
+        </p>
+        <p><span class="sub-title">align-items</span></p>
+        <pre>
+          <code class="code-sample">
+            /* all values accepted */
+            1 |  <span class="space"></span><span class="property">align-items</span>: <span class="value">flex-start | flex-end | center | baseline | stretch  </span>;
+          </code>
+
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-items > .flex-start</span> {
+            2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">flex-start</span>;
+            3 |  }
           </code>
         </pre>
-        <section class="flexbox-base-model">
-          <div><span class="flexbox-nums">1</span></div>
-          <div><span class="flexbox-nums">1</span></div>
-          <div><span class="flexbox-nums">1</span></div>
+        <section class="align-items">
+          <div class="flex-start">
+            <span class="bg-blue">flex-start</span>
+          </div>
         </section>
+        <pre class="mt-20">
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-items > .center</span> {
+            2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">center</span>;
+            3 |  }
+          </code>
+        </pre>
+        <section class="align-items">
+          <div class="center">
+            <span class="bg-yellow">center</span>
+          </div>
+        </section>
+        <pre class="mt-20">
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-items > .flex-end</span> {
+            2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">flex-end</span>;
+            3 |  }
+          </code>
+        </pre>
+        <section class="align-items">
+          <div class="flex-end">
+            <span class="bg-blue">flex-end</span>
+          </div>
+        </section>
+        <pre class="mt-20">
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-items > .stretch</span> {
+            2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">stretch</span>;
+            3 |  }
+          </code>
+        </pre>
+        <section class="align-items">
+          <div class="stretch">
+            <span class="bg-yellow">stretch</span>
+          </div>
+        </section>
+        <pre class="mt-20">
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-items > .baseline</span> {
+            2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">baseline</span>;
+            3 |  }
+          </code>
+        </pre>
+        <section class="align-items">
+          <div class="baseline">
+            <span class="bg-blue">baseline</span>
+          </div>
+        </section>
+        <p class="article">
+          Use <code class="inline-code">align-items</code> to align the content without regard to other items widths.
+          Note, this is used on flex containers.
+        </p>
+        <p><span class="sub-title">align-self</span></p>
+        <pre>
+          <code class="code-sample">
+            /* all values accepted */
+            1 |  <span class="space"></span><span class="property">align-items</span>: <span class="value">flex-start | flex-end | center | baseline | stretch  </span>;
+          </code>
+
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.align-self > .flex-start</span> {
+            2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">flex-start</span>;
+            3 |  }
+          </code>
+        </pre>
+       <section class="align-self">
+         <div class="flex-start">
+           <span class="bg-blue">flex-start</span>
+         </div>
+       </section>
+       <pre class="mt-20">
+         <code class="code-sample">
+           1 |  <span class="selector highlight">.align-self > .center</span> {
+           2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">center</span>;
+           3 |  }
+         </code>
+       </pre>
+       <section class="align-self">
+         <div class="center">
+           <span class="bg-yellow">center</span>
+         </div>
+       </section>
+       <pre class="mt-20">
+         <code class="code-sample">
+           1 |  <span class="selector highlight">.align-self > .flex-end</span> {
+           2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">flex-end</span>;
+           3 |  }
+         </code>
+       </pre>
+       <section class="align-self">
+         <div class="flex-end">
+           <span class="bg-blue">flex-end</span>
+         </div>
+       </section>
+       <pre class="mt-20">
+         <code class="code-sample">
+           1 |  <span class="selector highlight">.align-self > .stretch</span> {
+           2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">stretch</span>;
+           3 |  }
+         </code>
+       </pre>
+       <section class="align-self">
+         <div class="stretch">
+           <span class="bg-yellow">stretch</span>
+         </div>
+       </section>
+       <pre class="mt-20">
+         <code class="code-sample">
+           1 |  <span class="selector highlight">.align-self > .baseline</span> {
+           2 |    <span class="space"></span><span class="property">align-items</span>: <span class="value">baseline</span>;
+           3 |  }
+         </code>
+       </pre>
+       <section class="align-self">
+         <div class="baseline">
+           <span class="bg-blue">baseline</span>
+         </div>
+       </section>
+        <p class="article">
+          Use <code class="inline-code">align-self</code> on flex items to orient that items as needed.
+        </p>
+        <p><span class="sub-title">flex</span></p>
+        <pre>
+          <code class="code-sample">
+            /* basic values */
+            1 |  <span class="space"></span><span class="property">flex</span>: <span class="value">initial</span>; /* 0 1 auto */
+            2 |  <span class="space"></span><span class="property">flex</span>: <span class="value">auto</span>;    /* 1 1 auto */
+            3 |  <span class="space"></span><span class="property">flex</span>: <span class="value">none</span>;    /* 0 0 auto */
+            4 |  <span class="space"></span><span class="property">flex</span>: <span class="value">5</span>;       /* 5 1 0 */
+          </code>
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.flex > div:nth-child(1)</span> {
+            2 |    <span class="space"></span><span class="property">...</span>
+            3 |    <span class="space"></span><span class="property">flex</span>: <span class="value">5</span>;
+            4 |  }
+            5 |
+            6 |  <span class="selector highlight">.flex > div:nth-child(2)</span> {
+            7 |    <span class="space"></span><span class="property">...</span>
+            8 |    <span class="space"></span><span class="property">flex</span>: <span class="value">3</span>;
+            9 |  }
+           10 |
+           11 |  <span class="selector highlight">.flex > div:nth-child(3)</span> {
+           12 |    <span class="space"></span><span class="property">...</span>
+           13 |    <span class="space"></span><span class="property">flex</span>: <span class="value">5</span>;
+           14 |  }
+          </code>
+        </pre>
+        <section class="flex">
+          <div class="flex-num">
+            <div>
+              <span>5</span>
+            </div>
+            <div>
+              <span>3</span>
+            </div>
+            <div>
+              <span>4</span>
+            </div>
+          </div>
+          <div class="flex-initial">
+            <div>
+              <span>initial</span>
+            </div>
+            <div>
+              <span>5</span>
+            </div>
+            <div>
+              <span>initial</span>
+            </div>
+          </div>
+          <div class="flex-auto">
+            <div>
+              <span>auto</span>
+            </div>
+            <div>
+              <span>auto</span>
+            </div>
+            <div>
+              <span>3</span>
+            </div>
+          </div>
+          <div class="flex-none">
+            <div>
+              <span>none</span>
+            </div>
+            <div>
+              <span>none</span>
+            </div>
+            <div>
+              <span>auto</span>
+            </div>
+          </div>
+        </section>
+        <p class="article">
+          The flex shorthand sets the values for <code class="inline-code">flex-grow</code>, <code class="inline-code">flex-shrink</code>, and <code class="inline-code">flex-basis</code> all at once.
+          When using <code class="inline-code">flex</code>, only one value number value is needed, and the rest is set automatically given the space for the flex item(s).  Also, do not use
+          <code class="inline-code">flex-grow</code>, <code class="inline-code">flex-shrink</code>, or <code class="inline-code">flex-basis</code> individually, instead use <code class="inline-code">flex</code>.
+        </p>
+        <p><span class="sub-title">flex-direction</span></p>
+        <pre>
+          <code class="code-sample">
+            /* default value */
+            1 |  <span class="space"></span><span class="property">flex-direction</span>: <span class="value">row</span>;
+          </code>
+
+          <code class="code-sample">
+            /* all values accepted */
+            1 |  <span class="space"></span><span class="property">flex-direction</span>: <span class="value">row | row-reverse | column | column-reverse</span>;
+          </code>
+
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.column</span> {
+            2 |    <span class="space"></span><span class="property">...</span>
+            3 |    <span class="space"></span><span class="property">display</span>: <span class="value">flex</span>;
+            4 |    <span class="space"></span><span class="property">flex-direction</span>: <span class="value">column</span>;
+            5 |  }
+            6 |
+            7 |  <span class="selector highlight">.row</span> {
+            8 |    <span class="space"></span><span class="property">...</span>
+            9 |    <span class="space"></span><span class="property">display</span>: <span class="value">flex</span>;
+           10 |    <span class="space"></span><span class="property">flex-direction</span>: <span class="value">row</span>;
+           11 |  }
+          </code>
+        </pre>
+        <section class="flex-direction">
+          <dir class="column">
+            <div><p>column</p></div>
+            <div><p>column</p></div>
+            <div><p>column</p></div>
+          </dir>
+          <dir class="row">
+            <div><p>row</p></div>
+            <div><p>row</p></div>
+            <div><p>row</p></div>
+          </dir>
+        </section>
+        <p class="article">
+          There are two option: <code class="inline-code">column</code> or <code class="inline-code">row</code>.  This applies to flex containers.
+        </p>
+        <p><span class="sub-title">flex-flow</span></p>
+        <pre>
+          <code class="code-sample">
+            /* all values accepted */
+            1 |  <span class="space"></span><span class="property">flex-flow</span>: <span class="value">(flex-direction) | (flex-wrap) | (flex-direction) (flex-wrap)</span>;
+          </code>
+
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.flex-flow</span> {
+            2 |    <span class="space"></span><span class="property">...</span>
+            3 |    <span class="space"></span><span class="property">display</span>: <span class="value">flex</span>;
+            4 |    <span class="space"></span><span class="property">flex-flow</span>: <span class="value">row wrap</span>;
+            5 |  }
+          </code>
+        </pre>
+        <section class="flex-flow">
+          <div>
+            <p>row wrap</p>
+          </div>
+          <div>
+            <p>row wrap</p>
+          </div>
+          <div>
+            <p>row wrap</p>
+          </div>
+        </section>
+        <p class="article">
+          Use <code class="inline-code">flex-flow</code> as a short-hand way to define <code class="inline-code">flex-direction</code> and/or <code class="inline-code">flex-wrap</code>.
+          To see the outcome, try resizing the page or zooming in/out.  Note, when letting the browser decide how to <code class="inline-code">wrap</code> your items, the outcome may not look good, so try using media queries to define
+          how items look: <code class="inline-code">column</code> or <code class="inline-code">row</code>.
+        </p>
+        <p><span class="sub-title">flex-wrap</span></p>
+        <pre>
+          <code class="code-sample">
+            /* all values accepted */
+            1 |  <span class="space"></span><span class="property">flex-wrap</span>: <span class="value">wrap | nowrap | wrap-reverse</span>;
+          </code>
+
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.nowrap</span> {
+            2 |    <span class="space"></span><span class="property">...</span>
+            3 |    <span class="space"></span><span class="property">flex-wrap</span>: <span class="value">nowrap</span>;
+            4 |  }
+            5 |
+            6 |  <span class="selector highlight">.wrap</span> {
+            7 |    <span class="space"></span><span class="property">...</span>
+            8 |    <span class="space"></span><span class="property">flex-wrap</span>: <span class="value">wrap</span>;
+            9 |  }
+           10 |
+           11 |  <span class="selector highlight">.wrap-reverse</span> {
+           12 |    <span class="space"></span><span class="property">...</span>
+           13 |    <span class="space"></span><span class="property">flex-wrap</span>: <span class="value">wrap-reverse</span>;
+           14 |  }
+          </code>
+        </pre>
+        <section class="flex-wrap">
+          <div class="nowrap">
+            <div>
+              <p>nowrap 1</p>
+            </div>
+            <div>
+              <p>nowrap 2</p>
+            </div>
+            <div>
+              <p>nowrap 3</p>
+            </div>
+          </div>
+          <div class="wrap">
+            <div>
+              <p>wrap 1</p>
+            </div>
+            <div>
+              <p>wrap 2</p>
+            </div>
+            <div>
+              <p>wrap 3</p>
+            </div>
+          </div>
+          <div class="wrap-reverse">
+            <div>
+              <p>wrap-reverse 1</p>
+            </div>
+            <div>
+              <p>wrap-reverse 2</p>
+            </div>
+            <div>
+              <p>wrap-reverse 3</p>
+            </div>
+          </div>
+        </section>
+        <p class="article">
+          Use <code class="inline-code">flex-wrap</code> to specify how the content should wrap around the page if space decreases:
+          <code class="inline-code">wrap</code>, <code class="inline-code">nowrap</code>, or <code class="inline-code">wrap-reverse</code>.
+          The content here is kind of hard to show on a mobile device, but if on a computer, zoom in/out or resize the window to see the differences.
+        </p>
+        <p><span class="sub-title">justify-content</span></p>
+        <pre>
+          <code class="code-sample">
+            /* all values accepted */
+            1 |  <span class="space"></span><span class="property">justify-content</span>: <span class="value">flex-start | flex-end | center | space-between | space-around</span>;
+          </code>
+
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.flex-start</span> {
+            2 |    <span class="space"></span><span class="property">justify-content</span>: <span class="value">flex-start</span>;
+            3 |  }
+            4 |
+            5 |  <span class="selector highlight">.flex-end</span> {
+            6 |    <span class="space"></span><span class="property">justify-content</span>: <span class="value">flex-end</span>;
+            7 |  }
+            8 |
+            9 |  <span class="selector highlight">.center</span> {
+           10 |    <span class="space"></span><span class="property">justify-content</span>: <span class="value">center</span>;
+           11 |  }
+           12 |
+           13 |  <span class="selector highlight">.space-between</span> {
+           14 |    <span class="space"></span><span class="property">justify-content</span>: <span class="value">space-between</span>;
+           15 |  }
+           16 |
+           17 |  <span class="selector highlight">.space-around</span> {
+           18 |    <span class="space"></span><span class="property">justify-content</span>: <span class="value">space-around</span>;
+           19 |  }
+          </code>
+        </pre>
+        <section class="justify-content">
+          <div class="flex-start">
+            <span class="jc-text bg-yellow">flex-start</span>
+          </div>
+          <div class="flex-end">
+            <span class="jc-text bg-yellow">flex-end</span>
+          </div>
+          <div class="center">
+            <span class="jc-text bg-yellow">center</span>
+          </div>
+          <div class="space-between">
+            <span class="jc-text bg-yellow">space-between</span>
+            <span class="jc-text bg-blue">space-between</span>
+            <span class="jc-text bg-yellow">space-between</span>
+          </div>
+          <div class="space-around">
+            <span class="jc-text bg-yellow">space-around</span>
+            <span class="jc-text bg-blue">space-around</span>
+            <span class="jc-text bg-yellow">space-around</span>
+          </div>
+        </section>
+        <p class="article">
+          Starting from the top, the order of each property is: <code class="inline-code">flex-start</code>, <code class="inline-code">flex-end</code>,
+          <code class="inline-code">center</code>, <code class="inline-code">space-between</code>, <code class="inline-code">space-around</code>.
+          <code class="inline-code">justify-content</code> aligns items based on the <code class="inline-code">main-axis</code> shown at the very top of the page.
+        </p>
+        <p><span class="sub-title">order</span></p>
+        <pre>
+          <code class="code-sample">
+            /* all values accepted */
+            1 |  <span class="space"></span><span class="property">order</span>: <span class="value">(integer)</span>;
+          </code>
+
+          <code class="code-sample">
+            1 |  <span class="selector highlight">.order1 > div:nth-of-type(1)</span> {
+            2 |    <span class="space"></span><span class="property">order</span>: <span class="value">3</span>;
+            3 |  }
+            4 |
+            5 |  <span class="selector highlight">.order1 > div:nth-of-type(2)</span> {
+            6 |    <span class="space"></span><span class="property">order</span>: <span class="value">2</span>;
+            7 |  }
+            8 |
+            9 |  <span class="selector highlight">.order1 > div:nth-of-type(3)</span> {
+           10 |    <span class="space"></span><span class="property">order</span>: <span class="value">1</span>;
+           11 |  }
+           12 |
+           13 |  /* the .order2 section is in it's default numerical order */
+         </code>
+       </pre>
+        <section class="order">
+          <div class="order1">
+            <div><span class="bg-yellow">1</span></div>
+            <div><span class="bg-blue">2</span></div>
+            <div><span class="bg-yellow">3</span></div>
+          </div>
+          <div class="order2">
+            <div><span class="bg-yellow">1</span></div>
+            <div><span class="bg-blue">2</span></div>
+            <div><span class="bg-yellow">3</span></div>
+          </div>
+        </section>
+        <p class="article">
+          <code class="inline-code">order</code> can be used to visually change the order of items.  Never use it to change the logical order of items.
+          Note, <code class="inline-code">order</code> is used for <code class="inline-code">flex items</code>.
+        </p>
+        <!-- <p><span class="sub-title">place-content</span></p> -->
+        <p><span class="sub-title">w3</span></p>
+        <p class="article">
+          For more information on <code class="inline-code">flexbox</code>, check out <a href="https://www.w3.org/TR/css-flexbox-1/#intro">w3.org</a> for the whole documentation.
+        </p>
       </section>
       <!-- <section class="ads"></section> -->
     </div>

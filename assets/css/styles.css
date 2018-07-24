@@ -18,6 +18,21 @@ body, html {
   padding: 30px 24px;
 }
 
+.mt-20 {
+  margin-top: 20px;
+}
+
+/* ---------------------------------------------- */
+/* colors */
+
+.bg-blue {
+   background: #3BCEAC;
+}
+
+.bg-yellow {
+  background: #FFD23F;
+}
+
 /* ---------------------------------------------- */
 /*  header*/
 
@@ -92,12 +107,15 @@ a {
 
 p {
   margin: 20px 20px 20px 0;
+  width: 100%;
 }
 
 pre {
   background-color: #eee;
   width: 100%;
   overflow-x: scroll;
+  display: flex;
+  flex-flow: column;
 }
 
 .highlight {
@@ -127,13 +145,19 @@ pre {
   color: white;
   padding-left: 25px;
   padding-right: 3px;
-  max-width: 250px;
+  /* max-width: 250px; */
   text-align: right;
 }
 
 .inline-code {
   font-size: 1.3em;
   background: #a7ef93;
+}
+
+.code-sample {
+  position: relative;
+  left: -70px;
+  padding-right: 50px;
 }
 
 /* ----------------------------------------------- */
