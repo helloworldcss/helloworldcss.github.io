@@ -154,7 +154,7 @@
         </section>
         <p class="article">
           Use <code class="inline-code">align-content</code> to align the content with regard to other items widths.
-          In order to see changes after using <code class="inline-code">align-content</code>, some things need to be defined: a
+          In order to see changes after using <code class="inline-code">align-content</code>, some things may need to be defined: a
           <code class="inline-code">container height</code> and/or
           <code class="inline-code">content needs to wrap (be multi-line)</code>.
         </p>
@@ -163,6 +163,7 @@
           <code class="code-sample">
             /* all values accepted */
             1 |  <span class="space"></span><span class="property">align-items</span>: <span class="value">flex-start | flex-end | center | baseline | stretch  </span>;
+            2 |  ** applies to cross axis **
           </code>
 
           <code class="code-sample">
@@ -233,6 +234,7 @@
           <code class="code-sample">
             /* all values accepted */
             1 |  <span class="space"></span><span class="property">align-items</span>: <span class="value">flex-start | flex-end | center | baseline | stretch  </span>;
+            2 |  ** applies to cross axis **
           </code>
 
           <code class="code-sample">
@@ -295,7 +297,7 @@
          </div>
        </section>
         <p class="article">
-          Use <code class="inline-code">align-self</code> on flex items to orient that items as needed.
+          Use <code class="inline-code">align-self</code> on flex items to orient that item as needed.
         </p>
         <p id="flex"><span class="sub-title">flex</span></p>
         <pre>
@@ -305,6 +307,7 @@
             2 |  <span class="space"></span><span class="property">flex</span>: <span class="value">auto</span>;    /* 1 1 auto */
             3 |  <span class="space"></span><span class="property">flex</span>: <span class="value">none</span>;    /* 0 0 auto */
             4 |  <span class="space"></span><span class="property">flex</span>: <span class="value">5</span>;       /* 5 1 0 */
+            5 |  ** applies to main axis **
           </code>
           <code class="code-sample">
             1 |  <span class="selector highlight">.flex > div:nth-child(1)</span> {
@@ -371,7 +374,7 @@
         </section>
         <p class="article">
           The flex shorthand sets the values for <code class="inline-code">flex-grow</code>, <code class="inline-code">flex-shrink</code>, and <code class="inline-code">flex-basis</code> all at once.
-          When using <code class="inline-code">flex</code>, only one value number value is needed, and the rest is set automatically given the space for the flex item(s).  Also, do not use
+          When using <code class="inline-code">flex</code>, only one numerical value is needed, and the rest is set automatically given the space for the flex item(s).  Also, do not use
           <code class="inline-code">flex-grow</code>, <code class="inline-code">flex-shrink</code>, or <code class="inline-code">flex-basis</code> individually, instead use <code class="inline-code">flex</code>.
         </p>
         <p id="flex-direction"><span class="sub-title">flex-direction</span></p>
@@ -384,6 +387,8 @@
           <code class="code-sample">
             /* all values accepted */
             1 |  <span class="space"></span><span class="property">flex-direction</span>: <span class="value">row | row-reverse | column | column-reverse</span>;
+            2 |  ** applies to main axis if set to row, and cross axis if set to column **
+            3 |  ** if set to column, the main axis changes to cross axis **
           </code>
 
           <code class="code-sample">
@@ -420,6 +425,8 @@
           <code class="code-sample">
             /* all values accepted */
             1 |  <span class="space"></span><span class="property">flex-flow</span>: <span class="value">(flex-direction) | (flex-wrap) | (flex-direction) (flex-wrap)</span>;
+            2 |  ** applies to main axis if set to row, and cross axis if set to column **
+            3 |  ** if set to column, the main axis changes to cross axis **
           </code>
 
           <code class="code-sample">
@@ -444,13 +451,14 @@
         <p class="article">
           Use <code class="inline-code">flex-flow</code> as a short-hand way to define <code class="inline-code">flex-direction</code> and/or <code class="inline-code">flex-wrap</code>.
           To see the outcome, try resizing the page or zooming in/out.  Note, when letting the browser decide how to <code class="inline-code">wrap</code> your items, the outcome may not look good, so try using media queries to define
-          how items look: <code class="inline-code">column</code> or <code class="inline-code">row</code>.
+          how items look on: <code class="inline-code">column</code> or <code class="inline-code">row</code>.
         </p>
         <p id="flex-wrap"><span class="sub-title">flex-wrap</span></p>
         <pre>
           <code class="code-sample">
             /* all values accepted */
             1 |  <span class="space"></span><span class="property">flex-wrap</span>: <span class="value">wrap | nowrap | wrap-reverse</span>;
+            2 |  ** applies to main axis **
           </code>
 
           <code class="code-sample">
@@ -515,6 +523,8 @@
           <code class="code-sample">
             /* all values accepted */
             1 |  <span class="space"></span><span class="property">justify-content</span>: <span class="value">flex-start | flex-end | center | space-between | space-around</span>;
+            2 |  ** applies to main axis **
+            3 |  ** if applying justify-content to a column, the main axis changes to the cross axis **
           </code>
 
           <code class="code-sample">
@@ -561,9 +571,7 @@
           </div>
         </section>
         <p class="article">
-          Starting from the top, the order of each property is: <code class="inline-code">flex-start</code>, <code class="inline-code">flex-end</code>,
-          <code class="inline-code">center</code>, <code class="inline-code">space-between</code>, <code class="inline-code">space-around</code>.
-          <code class="inline-code">justify-content</code> aligns items based on the <code class="inline-code">main-axis</code> shown at the very top of the page.
+          It is pretty straight forward how these things look.  It is all done on the <code class="inline-code">main axis</code>.
         </p>
         <p id="order"><span class="sub-title">order</span></p>
         <pre>
