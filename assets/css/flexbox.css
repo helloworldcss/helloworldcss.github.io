@@ -43,6 +43,10 @@
   text-align: center;
 }
 
+section.align-content:nth-child(6) {
+  height: 310px;
+}
+
 .align-content > .flex-start,
 .align-content > .flex-end,
 .align-content > .center,
@@ -50,6 +54,10 @@
 .align-content > .space-around {
   display: flex;
   flex-wrap: wrap;
+}
+
+.align-content > .space-between,
+.align-content > .space-around {
   height: 200px;
 }
 
