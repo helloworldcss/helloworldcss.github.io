@@ -33,6 +33,8 @@
 .align-content, .align-items, .align-self, .flex, .flex-flow,
 .flex-wrap, .flex-direction, .justify-content, .order,
 .place-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   background: #f5abcc;
   margin-top: 20px;
@@ -52,14 +54,17 @@ section.align-content:nth-child(6) {
 .align-content > .center,
 .align-content > .space-between,
 .align-content > .space-around {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .align-content > .flex-start,
 .align-content > .flex-end,
 .align-content > .center {
-  height: 300px;
+  /* height: 300px; */
 }
 
 .align-content > .space-between,
@@ -84,6 +89,7 @@ section.align-content:nth-child(6) {
   justify-content: center;
   align-items: center;
   margin-right: 5px;
+  margin-bottom: 5px;
 }
 
 .align-content > .space-between  > span,
@@ -110,15 +116,18 @@ section.align-content:nth-child(6) {
 }
 
 .align-content > .flex-start {
-  align-content: flex-start;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
 }
 
 .align-content > .flex-end {
-  align-content: flex-end;
+  -ms-flex-line-pack: end;
+      align-content: flex-end;
 }
 
 .align-content > .center {
-  align-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .align-content > .space-between {
@@ -375,8 +384,8 @@ section.align-content:nth-child(6) {
   flex-wrap: nowrap;
 }
 
-.nowrap > div, 
-.wrap > div, 
+.nowrap > div,
+.wrap > div,
 .wrap-reverse > div {
   width: 200px;
   display: flex;
@@ -560,6 +569,27 @@ section.align-content:nth-child(6) {
     margin: 0px 5px 5px 0;
   }
 
+  .align-content > .flex-start > span:nth-last-of-type(3),
+  .align-content > .flex-start > span:nth-last-of-type(4),
+  .align-content > .flex-start > span:nth-last-of-type(5),
+  .align-content > .flex-start > span:nth-last-of-type(6),
+  .align-content > .flex-start > span:nth-last-of-type(7),
+  .align-content > .flex-start > span:nth-last-of-type(8),
+  .align-content > .center > span:nth-last-of-type(3),
+  .align-content > .center > span:nth-last-of-type(4),
+  .align-content > .center > span:nth-last-of-type(5),
+  .align-content > .center > span:nth-last-of-type(6),
+  .align-content > .center > span:nth-last-of-type(7),
+  .align-content > .center > span:nth-last-of-type(8),
+  .align-content > .flex-end > span:nth-last-of-type(3),
+  .align-content > .flex-end > span:nth-last-of-type(4),
+  .align-content > .flex-end > span:nth-last-of-type(5),
+  .align-content > .flex-end > span:nth-last-of-type(6),
+  .align-content > .flex-end > span:nth-last-of-type(7),
+  .align-content > .flex-end > span:nth-last-of-type(8) {
+    display: none;
+  }
+
   .align-content > .space-between > span:nth-last-of-type(3),
   .align-content > .space-between > span:nth-last-of-type(4),
   .align-content > .space-between > span:nth-last-of-type(5),
@@ -596,7 +626,47 @@ section.align-content:nth-child(6) {
   }
 }
 
+@media ( max-width: 950px ) {
+  .align-content > .flex-start > span:nth-last-of-type(3),
+  .align-content > .flex-start > span:nth-last-of-type(4),
+  .align-content > .flex-start > span:nth-last-of-type(5),
+  .align-content > .flex-start > span:nth-last-of-type(6),
+  .align-content > .flex-start > span:nth-last-of-type(7),
+  .align-content > .center > span:nth-last-of-type(3),
+  .align-content > .center > span:nth-last-of-type(4),
+  .align-content > .center > span:nth-last-of-type(5),
+  .align-content > .center > span:nth-last-of-type(6),
+  .align-content > .center > span:nth-last-of-type(7),
+  .align-content > .center > span:nth-last-of-type(8),
+  .align-content > .flex-end > span:nth-last-of-type(3),
+  .align-content > .flex-end > span:nth-last-of-type(4),
+  .align-content > .flex-end > span:nth-last-of-type(5),
+  .align-content > .flex-end > span:nth-last-of-type(6),
+  .align-content > .flex-end > span:nth-last-of-type(7),
+  .align-content > .flex-end > span:nth-last-of-type(8) {
+    display: none;
+  }
+}
+
 @media ( max-width: 1000px ) {
+  .align-content > .flex-start > span:nth-last-of-type(3),
+  .align-content > .flex-start > span:nth-last-of-type(4),
+  .align-content > .flex-start > span:nth-last-of-type(5),
+  .align-content > .flex-start > span:nth-last-of-type(6),
+  .align-content > .flex-start > span:nth-last-of-type(7),
+  .align-content > .center > span:nth-last-of-type(3),
+  .align-content > .center > span:nth-last-of-type(4),
+  .align-content > .center > span:nth-last-of-type(5),
+  .align-content > .center > span:nth-last-of-type(6),
+  .align-content > .center > span:nth-last-of-type(7),
+  .align-content > .flex-end > span:nth-last-of-type(3),
+  .align-content > .flex-end > span:nth-last-of-type(4),
+  .align-content > .flex-end > span:nth-last-of-type(5),
+  .align-content > .flex-end > span:nth-last-of-type(6),
+  .align-content > .flex-end > span:nth-last-of-type(7) {
+    display: none;
+  }
+
   .align-content > .space-between > span:nth-last-of-type(5),
   .align-content > .space-between > span:nth-last-of-type(6),
   .align-content > .space-between > span:nth-last-of-type(7),
@@ -625,6 +695,23 @@ section.align-content:nth-child(6) {
   .align-content > .space-around > span:nth-last-of-type(4),
   .align-content > .space-around > span:nth-last-of-type(5),
   .align-content > .space-around > span:nth-last-of-type(6){
+    display: none;
+  }
+}
+
+@media ( max-width: 1600px ) {
+  .align-content > .flex-start > span:nth-last-of-type(3),
+  .align-content > .flex-start > span:nth-last-of-type(4),
+  .align-content > .flex-start > span:nth-last-of-type(5),
+  .align-content > .flex-start > span:nth-last-of-type(6),
+  .align-content > .center > span:nth-last-of-type(3),
+  .align-content > .center > span:nth-last-of-type(4),
+  .align-content > .center > span:nth-last-of-type(5),
+  .align-content > .center > span:nth-last-of-type(6),
+  .align-content > .flex-end > span:nth-last-of-type(3),
+  .align-content > .flex-end > span:nth-last-of-type(4),
+  .align-content > .flex-end > span:nth-last-of-type(5),
+  .align-content > .flex-end > span:nth-last-of-type(6) {
     display: none;
   }
 }
