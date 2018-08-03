@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../assets/css/styles.css">
     <link rel="stylesheet" href="../assets/css/flexbox.css">
     <meta name="theme-color" content="#540D6E">
-    <title>Hello World CSS</title>
+    <title>A Full Guide to Flexbox CSS</title>
   </head>
   <body>
     <header>
@@ -18,7 +18,7 @@
       <nav>
         <ul class="outside">
           <span class="rotate">&rtrif;</span><li class="navArrow">Flexbox
-            <ul class="insideUL animated">
+            <ul class="insideUL">
               <li><a href="./pages/flexbox.html">flexbox</a></li>
               <li><a href="#align-content">align-content</a></li>
               <li><a href="#align-items">align-items</a></li>
@@ -33,32 +33,44 @@
           </li>
           <div></div>
           <span class="rotate">&rtrif;</span>
+          <li class="navArrow">Grid
+            <ul class="insideUL">
+              <li>1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>6</li>
+            </ul>
+          </li>
+          <div></div>
+          <span class="rotate">&rtrif;</span>
           <li class="navArrow">CSS Animation
-            <ul class="insideUL animated">
+            <ul class="insideUL">
               <li>Make smooth transitions</li>
             </ul>
           </li>
           <div></div>
           <span class="rotate">&rtrif;</span>
           <li class="navArrow">References
-            <ul class="insideUL animated">
+            <ul class="insideUL">
               <li>Affiliate Market links</li>
             </ul>
           </li>
         </ul>
       </nav>
-      <section class="content">
-        <h3 id="flexbox"><span class="title">Flexbox</span></h3>
-        <p class="article">
-          First thing is first, the initial axis' need to be defined for flexbox, so hear goes.  Being familir with the x,y plot system from algebra
-          ( remember slopes? ), the two used in flexbox are: main axis ( x-axis ) and cross axis ( y-axis ).
-          To master flexbox, knowing these when positioning items will be less confusing.  for example, if the main flow of flexbox gets changed from
-          <code class="inline-code">row</code> to <code class="inline-code">column</code>, the main axis and cross axis will switch places.
-        </p>
-        <section class="flexbox-axis">
-          <span class="cross-axis">cross axis</span>
-          <span class="main-axis">main axis</span>
-        </section>
+      <main class="content">
+          <h3 id="flexbox"><span class="title">Flexbox</span></h3>
+          <p class="article">
+            To understand flexbox, the initial axis' need to be defined for flexbox, so hear goes.  Being familir with the x,y plot system from algebra
+            ( remember slopes? ), the two used in flexbox are: main axis ( x-axis ) and cross axis ( y-axis ).
+            To master flexbox, knowing these when positioning items will be less confusing.  for example, if the main flow of flexbox gets changed from
+            <code class="inline-code">row</code> to <code class="inline-code">column</code>, the main axis and cross axis will switch places.
+          </p>
+          <section class="flexbox-axis">
+            <span class="cross-axis">cross axis</span>
+            <span class="main-axis">main axis</span>
+          </section>
         <p id="align-content"><span class="sub-title">align-content</span></p>
         <pre>
           <code class="code-sample">
@@ -638,7 +650,7 @@
         <p class="article">
           For more information on <code class="inline-code">flexbox</code>, check out <a href="https://www.w3.org/TR/css-flexbox-1/#intro">w3.org</a> for the whole documentation.
         </p>
-      </section>
+      </main>
       <!-- <section class="ads"></section> -->
     </div>
     <script src="../assets/js/scripts.js"></script>
